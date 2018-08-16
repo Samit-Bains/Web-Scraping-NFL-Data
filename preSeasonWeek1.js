@@ -54,43 +54,7 @@ request('http://www.nfl.com/scores/2018/PRE1', (error, response, html) => {
             writeStream.write(`${date}, ${AteamRecord}, ${AteamName} , ${AteamScore}, ${HteamRecord}, ${HteamName}, ${HteamScore} \n`);
         });
 
-
-
-
-
-
-
-
-        // $('.away-team').each((i, el) => {
-        //     const AteamRecord = $(el)
-        //         .find('.team-record')
-        //         .text()
-        //         .replace(/\s\s+/g, '');
-        //     const AteamName = $(el)
-        //         .find('.team-name')
-        //         .text()
-        //     const AteamScore = $(el)
-        //         .find('.total-score')
-        //         .text()
-                
-        //     writeStream.write(`${AteamRecord} \n, ${AteamName} \n, ${AteamScore} \n,`);
-        // });
-
-        // $('.home-team').each((i, el) => {
-        //     const HteamRecord = $(el)
-        //         .find('.team-record')
-        //         .text()
-        //         .replace(/\s\s+/g, '');
-        //     const HteamName = $(el)
-        //         .find('.team-name')
-        //         .text()
-        //     const HteamScore = $(el)
-        //         .find('.total-score')
-        //         .text()
-                
-        //     writeStream.write(`${HteamRecord} \n, ${HteamName} \n, ${HteamScore} \n`);
-        // });
-
+        
         console.log('Scraping Done . . . ');
     }
 });
